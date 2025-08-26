@@ -10,8 +10,11 @@ function borrar() {
 
 function calcular() {
   try {
-    pantalla.value = eval(pantalla.value);
+    let expresion = pantalla.value.replace(/%/g, "/100");
+    pantalla.value = eval(expresion);
   } catch {
     pantalla.value = "Error";
   }
 }
+
+
